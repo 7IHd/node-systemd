@@ -12,12 +12,40 @@ Handles and processes long running background tasks/services.
 
 ## Server.js
 Make `server.js` an executable and create a symlink.
+
+**Note: symlink path must be absolute.**
+
 ```
 chmod +x server.js
-ln server.js /app/services/hello_moto/server.js
+ln /home/yoda/Github/app/services/hello_moto/server.js /app/services/hello_moto/server.js
 ```
 
+```
+ln /home/yoda/Github/etc/systemd/system/hello_moto.service /etc/systemd/system/hello_moto.service
+```
+
+## Enable and Start the Service
 
 ```
-ln etc/systemd/system/hello_moto.service /etc/systemd/system/hello_moto.service
+systemctl enable hello_moto.service
 ```
+
+```
+systemctl start hello_moto.service
+```
+
+## Troubleshooting
+If troublshooting make sure to reload the daemon.
+
+```
+systemctl daemon-reload
+```
+
+To view all output logs use the following command.
+
+```
+sudo journalctl -u hello_moto.service
+# For real time logs just add -f argument
+sudo journalctl -fu hello_moto.service
+```
+

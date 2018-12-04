@@ -6,7 +6,7 @@ User=yoda
 Group=yoda
 Restart=always
 KillSignal=SIGQUIT
-WorkingDirectory=/app/service/hello_world/
-ExecStart=/app/service/hello_world/server.js
+WorkingDirectory=/app/services/hello_moto/
+ExecStart=/app/services/hello_moto/server.js
 [Install]
 WantedBy=multi-user.target
