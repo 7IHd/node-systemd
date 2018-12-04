@@ -17,11 +17,11 @@ Make `server.js` an executable and create a symlink.
 
 ```
 chmod +x server.js
-ln /home/yoda/Github/app/services/hello_moto/server.js /app/services/hello_moto/server.js
+ln /home/yoda/Github/node-systemd/app/services/hello_moto/server.js /app/services/hello_moto/server.js
 ```
 
 ```
-ln /home/yoda/Github/etc/systemd/system/hello_moto.service /etc/systemd/system/hello_moto.service
+ln /home/yoda/Github/node-systemd/etc/systemd/system/hello_moto.service /etc/systemd/system/hello_moto.service
 ```
 
 ## Enable and Start the Service
